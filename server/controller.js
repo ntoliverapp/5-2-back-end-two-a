@@ -10,7 +10,7 @@ module.exports = {
         const {title, rating, imageURL} = req.body
         const newMovie = {
             title,
-            rating,
+            rating: +rating,
             imageURL,
             id: globalId
         }
