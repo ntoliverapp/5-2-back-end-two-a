@@ -6,5 +6,12 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.listen(4545, () => 
-console.log ("4545 running!"))
+const ctrl = require('./controller');
+
+//console.log(ctrl);
+
+app.get('/api/movies', ctrl.getAllMovies);
+app.post('/api/movies', ctrl.createMovie);
+
+app.listen(4004, () => 
+console.log ("4004 running!"));
