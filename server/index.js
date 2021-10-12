@@ -13,5 +13,8 @@ const ctrl = require('./controller');
 app.get('/api/movies', ctrl.getAllMovies);
 app.post('/api/movies', ctrl.createMovie);
 app.put('/api/movies/:id', ctrl.updateMovie);
+app.delete('/api/movies/:id', ctrl.deleteMovie)
+
+
 app.listen(4004, () => 
 console.log ("4004 running!"));
